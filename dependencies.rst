@@ -97,5 +97,46 @@ Opponents claim that the future use of subslots is not 100% predictable.
 They point out the case of Qt packages as an example.
 
 
+.. index::
+   single: dependency; dynamic
+   pair: dependency; revision bump
+
+Revision bumps on runtime dependency changes
+--------------------------------------------
+:Source: Council
+:Reference: https://projects.gentoo.org/council/meeting-logs/20151011-summary.txt
+:Reported: no
+
+It must not be assumed that changes to package's dependencies will
+be implicitly propagated to users who have installed the package
+already.  Whenever the change needs to be propagated (e.g. to prevent
+a missing runtime dependency from being cleaned), the package revision
+must be increased.
+
+This does not apply to build-time dependencies.
+
+*Rationale*: developers were historically relying on Portage's behavior
+called *dynamic dependencies* which caused Portage to implicitly use
+dependencies specified in matching ebuilds for installed packages.  This
+is non-portable and unreliable.  Users using different package managers,
+disabling the feature or simply missing the timeframe during which
+the old ebuild version existed had experienced dependency graph breakage
+and other problems due to it.
+
+The policy requires developers to explicitly account for that
+possibility.  Revision bumps ensure that users who installed the package
+from the previous ebuild version rebuild it and get the updated
+dependencies as a result.
+
+.. Note::
+
+   The dynamic dependency usage problem has a flip side.  You can't rely
+   on in-place dependency changes *not* being propagated either.  For
+   example, if you notice that a package linked to libfoo unnecessarily,
+   and decide to remove the dependency and code responsible for linking
+   to it in place, Portage may apply the former immediately even
+   if the package installed by the user still links to libfoo.
+
+
 .. _GLEP 62: https://www.gentoo.org/glep/glep-0062.html
 .. _Paludis: https://paludis.exherbo.org/
