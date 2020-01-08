@@ -1,7 +1,7 @@
 Other metadata variables
 ========================
 
-.. index:: slot; dynamic
+.. index:: slot/subslot; dynamic
 .. index:: USE flags; multislot
 
 Dynamic slots (multislot flag)

@@ -31,11 +31,13 @@ This is especially important for packages that take long time to build.
 
 
 .. index::
-   pair: slot; dependency
-   pair: subslot; dependency
+   pair: slot/subslot; dependency
 
 Slot and subslot dependencies
 -----------------------------
+
+on (sub-)slotted packages
+~~~~~~~~~~~~~~~~~~~~~~~~~
 :Source: QA
 :Reference: https://archives.gentoo.org/gentoo-portage-dev/message/9cae3a92412a007febe7ac0612d50f5f
 :Reported: by repoman and pkgcheck
@@ -62,6 +64,37 @@ means 'verified that any slot is acceptable'.
    The Paludis_ package manager applies different logic when no slot
    is specified on the dependency.  It pulls in the slot corresponding
    to the newest package version available.
+
+
+.. index::
+   pair: slot/subslot; Qt
+
+special case: Qt packages
+~~~~~~~~~~~~~~~~~~~~~~~~~
+:Source: Qt project
+:Reference: https://wiki.gentoo.org/wiki/Project:Qt/Policies#Dependencies
+:Reported: no
+
+The Qt packages use subslots in an uncommon way.  The public ABI of Qt
+libraries is stable within each slot, and the subslot is used to refer
+to private ABI.  Therefore, the ``:=`` operator must only be used
+if your package uses one of the private API parts, and plain ``:5``
+or likewise dependency must be used otherwise.
+
+proactive use of slot operators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There is an open debate on whether developers should be proactively
+adding ``:=`` slot operators on packages that do not define subslots
+yet.
+
+Proponents of the idea point out that adding slot operators to reverse
+dependencies after the package becomes slotted is cumbersome and usually
+results in losing the subslot rebuild opportunity at least once.  They
+argue that in many cases the future use of subslots is reasonably
+predictable.
+
+Opponents claim that the future use of subslots is not 100% predictable.
+They point out the case of Qt packages as an example.
 
 
 .. _GLEP 62: https://www.gentoo.org/glep/glep-0062.html
