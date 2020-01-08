@@ -1,6 +1,33 @@
 Ebuild file format
 ==================
 
+.. index::
+   single: bash; conditions
+   single: bash; variable reference
+   single: indentation
+
+Coding style
+------------
+:Source: QA
+:Reported: partially via repoman and pkgcheck
+
+While Gentoo leaves most of the coding style choices to developers,
+there are a few rules which we try to enforce.  Those are:
+
+- Always indent using a single tab for indentation level.  Do not
+  attempt to align, as it will not work with different tab widths.
+
+- Whenever using named variables, use bracketed variable form, i.e.
+  ``${foo}`` rather than ``$foo``.
+
+- Use bash conditions ``[[ ... ]]`` rather than POSIX-ish ``[ ... ]``
+  or ``test`` builtin.
+
+*Rationale*: the recommended constructs are less error-prone.
+Consistency avoids unnecessary changes when other developers edit
+the ebuild.
+
+
 .. index:: eblit
 
 Code must be contained within ebuild and eclasses
