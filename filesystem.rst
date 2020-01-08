@@ -97,3 +97,40 @@ files strictly needed at boot.  For this reason, many old Gentoo
 installations may still use small / partition.  Static libraries are
 used only during package builds, and installing them to rootfs would
 be a waste of space.
+
+
+.. index::
+   pair: file system; games
+
+Game install locations and ownership
+------------------------------------
+:Source: Council, clarified by QA
+:Reference: https://projects.gentoo.org/council/meeting-logs/20151213-summary.txt
+            https://projects.gentoo.org/council/meeting-logs/20151011-summary.txt
+:Reported: via install-qa-check.d
+
+The historical game install locations (/usr/games and /etc/games) must
+not be used anymore.  Instead, games should follow normal guidelines
+for install locations.  As an exception, /usr/share/games can be used
+if this location is used upstream, and /var/games can be used for shared
+game files (e.g. high scores, game state files).
+
+The historical games group must no longer be used.  Games must work
+for users that are not in this group.  The aforementioned install
+locations must therefore be owned by root and be world-readable.
+
+If games need privileged access to shared files, the group gamestat
+can be used for this purpose.  The game executables should be owned
+by that group and made setgid.  The shared files must be installed
+into /var/games hierarchy, and writable to gamestat group.
+
+*Rationale*: there is no technical reason to isolate games from other
+applications on the system, or to restrict access to them.  The boundary
+between game and non-game packages is very blurry on modern systems,
+especially due to web browsers.
+
+The historical use of games group on Gentoo to control access is
+inconsistent with the use in other distributions where it was used to
+share data files.  Since the latter implied users must not be added
+to the games group, a new group (gamestat) needed to be created to
+fulfill that purpose.
