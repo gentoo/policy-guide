@@ -1,7 +1,7 @@
 Dependencies
 ============
 
-.. index:: RDEPEND; optional
+.. index:: dependency; optional runtime
 .. index:: USE flags; for optional RDEPEND
 
 Optional runtime dependencies
@@ -30,9 +30,9 @@ This is especially important for packages that take long time to build.
    by the Council but no reference implementation has been written.
 
 
-.. index:: RDEPEND; slot and subslot deps
-.. index:: Slot; dependencies
-.. index:: Subslot; dependencies
+.. index::
+   pair: slot; dependency
+   pair: subslot; dependency
 
 Slot and subslot dependencies
 -----------------------------
