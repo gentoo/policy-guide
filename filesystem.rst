@@ -56,6 +56,25 @@ exceptions are:
 .. TODO:: rationale
 
 
+.. index:: file system; separate /usr
+
+Support for separate /usr
+-------------------------
+:Source: QA
+:Reference: https://projects.gentoo.org/council/meeting-logs/20130813-summary.txt
+            https://projects.gentoo.org/council/meeting-logs/20130924-summary.txt
+:Reported: no
+
+Developers are not required to support using separate /usr filesystem
+without an initramfs.
+
+*Rationale*: upstream software (as of 2013) is already making support
+for early boot without /usr mounted difficult, and whenever it is still
+works, it is either subtly broken or relying on hacks (udev).  In setups
+using initramfs, some of the boot and repair functionality can be moved
+from rootfs to initramfs.
+
+
 .. index:: file system; multilib-strict
 
 Strict multilib layout
