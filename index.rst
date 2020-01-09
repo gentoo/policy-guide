@@ -14,6 +14,7 @@ in which the policy can be updated.
    :caption: Contents:
    :glob:
 
+   preface
    motivation
    basics
    other-docs
