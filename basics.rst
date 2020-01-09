@@ -64,9 +64,25 @@ Finally, in case of repeated unwillingness to follow policies, the QA
 team can issue disciplinary measures against the developer in question.
 
 
+Policy making, changes and appeals
+----------------------------------
+The majority of policies are written down and maintained by the `QA
+team`_.  Other Gentoo projects also create policies that affect their
+specific areas of contributions (e.g. `systemd project`_ created
+policies related to installing systemd unit files).
+
+Each policy listed in this document indicates the body maintaining it.
+In order to change or abolish the policy, that team should be contacted.
+If the project in question disagrees with the change, `QA team`_ can be
+asked to override the policy.  All QA decisions and policies can further
+be appealed to the Council_.
+
+
 .. _repoman: https://wiki.gentoo.org/wiki/Repoman
 .. _pkgcheck: https://github.com/pkgcore/pkgcheck
 .. _Gentoo CI: https://qa-reports.gentoo.org/output/gentoo-ci/output.html
 .. _gentoo-automated-testing: https://archives.gentoo.org/gentoo-automated-testing/
 .. _QA team: https://wiki.gentoo.org/wiki/Project:Quality_Assurance
 .. _GLEP 48: https://www.gentoo.org/glep/glep-0048.html
+.. _systemd project: https://wiki.gentoo.org/wiki/Project:Systemd
+.. _Council: https://wiki.gentoo.org/wiki/Project:Council
