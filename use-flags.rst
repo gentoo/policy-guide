@@ -31,6 +31,32 @@ with the QA team before introduction.
    removed since.
 
 
+.. index::
+   single: USE flags; gui
+   single: gtk; gui flag
+   single: Qt; gui flag
+
+USE=gui flag
+------------
+:Source: QA
+:Reference: https://archives.gentoo.org/gentoo-dev/message/cf3f5a59ac918335766632bd02438722
+:Reported: no
+
+Whenever a package offers an optional GUI support, the ``gui`` flag must
+be used to control that support rather than historically used ``X``
+or toolkit flags.  Toolkit flags can still be used to choose between
+multiple available GUIs, or when the toolkit is used in a more
+specialized way than for GUI (e.g. to control installing widgets).
+
+*Rationale*: the historical use of toolkit flags to control building
+GUIs made it very hard for users to express the simple wish of 'I want
+*any* GUI'.  Installing various packages made it necessary to either
+adjust flags per package (manually discovering which flags are necessary
+to obtain the GUI) or enabling multiple toolkits globally which
+afterwards caused issues with packages supporting a choice between
+multiple GUIs.
+
+
 .. index:: USE flags; underscore
 
 Underscores in USE flag names
