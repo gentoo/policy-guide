@@ -78,8 +78,9 @@ and packages must install libraries into appropriate directory for them
 to be correctly found by the dynamic loader.
 
 
-.. index:: file system; static library
-.. index:: file system; libtool file
+.. index::
+   pair: file system; static library
+   pair: file system; libtool file
 
 Static libraries and libtool files
 ----------------------------------
