@@ -30,6 +30,34 @@ This is especially important for packages that take long time to build.
    by the Council but no reference implementation has been written.
 
 
+.. index:: dependency; = with no revision
+
+=-dependencies with no revision
+-------------------------------
+:Source: QA
+:Reported: by repoman and pkgcheck
+
+Whenever a non-wildcard ``=`` (equals) dependency is used on a package,
+the requested revision must be specified explicitly.  When the zeroth
+revision is requested, ``-r0`` must be used.  When no specific revision
+is necessary, the ``~`` (tilde) operator must be used instead.
+
+*Example*::
+
+    # BAD:
+    =dev-libs/libfrobnicate-1.2.3
+    # GOOD:
+    =dev-libs/libfrobnicate-1.2.3-r0
+    =dev-libs/libfrobnicate-1.2.3-r3
+    ~dev-libs/libfrobnicate-1.2.3
+
+*Rationale*: using ``=`` operator in place of ``~`` to mean a specific
+version has been a common mistake.  This policy uses the fact that
+no revision and explicit ``-r0`` are equivalent.  By explicitly
+requesting the latter, it warns developers to reconsider whether they
+used the correct operator.
+
+
 .. index::
    pair: slot/subslot; dependency
 
