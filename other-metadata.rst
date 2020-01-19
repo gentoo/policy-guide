@@ -36,4 +36,31 @@ manager behavior which could include use of unpredictable slot, cache
 invalidation or explicit errors.
 
 
+.. index::
+   single: homepage; meaningful value
+   pair: homepage; gentoo.org
+
+HOMEPAGE value must be meaningful
+---------------------------------
+:Source: QA
+:Reference: https://archives.gentoo.org/gentoo-dev/message/83cc5bbd7bbe8bdf04dd3c3bc7f8a035
+:Reported: known bad values are reported by pkgcheck
+
+The HOMEPAGE specified for the package should either be dedicated
+to the package in question or make it easy to find dedicated
+information.  Packages must not use ``https://www.gentoo.org/``
+or a similar generic homepage.  If no homepage is available, the special
+value of ``https://wiki.gentoo.org/wiki/No_homepage`` must be used.
+
+*Rationale*: The homepage specified in ebuilds is normally used to
+locate information about the upstream project, e.g. downloads, source
+code repository, bug tracker, documentation.  Homepages that make it
+hard to locate information about a specific project have little value,
+and the Gentoo homepage generally does not do a good job at linking even
+major Gentoo projects.  Furthermore, many of the projects did not even
+have a single dedicated subpage anywhere in Gentoo web space.  In all
+those cases, using the explicit No_homepage marker at least makes it
+easy to identify such packages.
+
+
 .. _metadata invariance: https://projects.gentoo.org/pms/7/pms.html#x1-600007.1
