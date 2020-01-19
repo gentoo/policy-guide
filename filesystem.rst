@@ -154,3 +154,29 @@ inconsistent with the use in other distributions where it was used to
 share data files.  Since the latter implied users must not be added
 to the games group, a new group (gamestat) needed to be created to
 fulfill that purpose.
+
+
+.. index:: symbolic link; absolute target
+
+Absolute symbolic link targets
+------------------------------
+:Source: QA
+:Reported: by repoman and pkgcheck (when ebuild-generated)
+
+Packages must not install symbolic links with absolute targets.
+Instead, relative paths must be used.  An exception is granted
+for symlinks to specially mounted filesystems (such as /proc, /run)
+when symlinks are supposed to always reference the running host system.
+
+*Example*::
+
+    # BAD:
+    dosym /usr/lib/frobnicate/frobnicate /usr/bin/frobnicate
+    # GOOD:
+    dosym ../lib/frobnicate/frobnicate /usr/bin/frobnicate
+    # ACCEPTABLE EXCEPTION:
+    dosym /proc/self/mounts /etc/mtab
+
+*Rationale*: absolute symlinks work correctly only when the root
+filesystem is mounted at /.  They point at the wrong location whenever
+it is mounted in another location, e.g. for the purposes of recovery.
