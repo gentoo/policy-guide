@@ -166,5 +166,46 @@ dependencies as a result.
    if the package installed by the user still links to libfoo.
 
 
+.. index::
+   pair: USE flags; dependency
+
+USE dependencies
+----------------
+
+on packages without the flag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:Source: QA (inferred from PMS)
+:Reported: by pkgcheck
+
+Whenever a package uses a 2-style USE-dependency on another package,
+all package versions matching the dependency must have the flag
+in question.  If the dependency matches at least one version missing
+the flag, either 4-style USE-dependency (i.e. having ``(-)`` or ``(+)``
+indicator) must be used, or the restriction must be refined to match
+only versions having the flag.
+
+*Example*::
+
+    # BAD: USE=gtk2 is not supported by v2
+    dev-foo/libfrobnicate[gtk2]
+    # GOOD: all matching versions have USE=tools
+    <dev-foo/libfrobnicate-2[gtk2]
+    # GOOD: indicate the default
+    dev-foo/libfrobnicate[gtk2(-)]
+
+    # BAD: USE=tools is no longer needed with v2
+    dev-foo/libbar[tools]
+    # GOOD: indicate the default
+    dev-foo/libbar[tools(+)]
+
+*Rationale*: according to the PMS section on `2-style and 4-style USE
+dependencies`_, it is an error to apply 2-style USE dependency to
+a package missing the flag.  Furthermore, checking for this makes it
+possible to report whenever USE flags on a package are changed without
+updating its reverse dependencies.
+
+
 .. _GLEP 62: https://www.gentoo.org/glep/glep-0062.html
 .. _Paludis: https://paludis.exherbo.org/
+.. _2-style and 4-style USE dependencies:
+     https://projects.gentoo.org/pms/7/pms.html#x1-790008.2.6.4
