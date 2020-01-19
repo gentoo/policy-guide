@@ -63,4 +63,35 @@ those cases, using the explicit No_homepage marker at least makes it
 easy to identify such packages.
 
 
+.. index::
+   single: restrict; test; USE=-test
+   single: USE flags; test; restrict
+
+RESTRICT=test for USE=-test
+---------------------------
+:Source: QA
+:Reported: by pkgcheck
+
+Whenever the package uses ``test`` flag to control test prerequisites
+(or another flag with a similar purpose), it must explicitly restrict
+tests when the flag is unset.
+
+*Example*::
+
+    IUSE="test"
+    RESTRICT="!test? ( test )"
+
+*Rationale*: contrary to common assumption, ``test`` flag is not special
+and the package manager can execute tests when the flag is disabled.
+The explicit restriction guarantees that tests will be skipped under
+this circumstance, and they will not fail for users.
+
+.. Note::
+   Technically there are packages that do not strictly require this
+   restriction since they handle missing test prerequisites gracefully
+   (e.g. by skipping the tests).  However, we enforce the rule for all
+   packages since omitting the restriction by mistake is much more
+   common, and there is little harm in overspecifying it.
+
+
 .. _metadata invariance: https://projects.gentoo.org/pms/7/pms.html#x1-600007.1
