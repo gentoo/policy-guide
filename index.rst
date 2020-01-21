@@ -18,6 +18,7 @@ in which the policy can be updated.
    motivation
    basics
    other-docs
+   editing
    *
 
 
