@@ -10,7 +10,6 @@ in which the policy can be updated.
 
 
 .. toctree::
-   :maxdepth: 2
    :caption: Contents:
    :glob:
 
