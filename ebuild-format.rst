@@ -68,7 +68,6 @@ preprocessing, breaking URI support in terminals and editors, as well
 as reducing the usefulness of plain tools such as grep.
 
 
-
 .. index::
    pair: src uri; homepage
 
@@ -87,3 +86,20 @@ incidentally depend on multi-valued variable having a single value
 goes against the principle of least surprise.  Furthermore, it makes
 it hard to copy-paste part of the URI e.g. to investigate the directory
 index.
+
+
+.. index:: keywords; one line
+
+KEYWORDS must be defined on a single line
+-----------------------------------------
+:Source: QA
+:Reported: no
+
+The ``KEYWORDS`` variable must be defined at most once in an ebuild,
+on a single line, with literal content (no variable references, line
+wrapping, appending, etc.).
+
+*Rationale*: it is common for arch teams to use the ``ekeyword`` tool
+when working with large number of ebuilds.  The tool has only limited
+ability to process and modify ebuilds, and therefore developers must
+make sure that it works correctly on their ebuilds.
