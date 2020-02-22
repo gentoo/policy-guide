@@ -5,6 +5,7 @@ File system layout
 
 Installation paths
 ------------------
+:PG: 0201
 :Source: QA
 :Reference: https://gitweb.gentoo.org/repo/gentoo.git/tree/metadata/install-qa-check.d/08gentoo-paths
 :Reported: via install-qa-check.d
@@ -60,6 +61,7 @@ exceptions are:
 
 Support for separate /usr
 -------------------------
+:PG: 0202
 :Source: QA
 :Reference: https://projects.gentoo.org/council/meeting-logs/20130813-summary.txt
             https://projects.gentoo.org/council/meeting-logs/20130924-summary.txt
@@ -79,6 +81,7 @@ from rootfs to initramfs.
 
 Strict multilib layout
 ----------------------
+:PG: 0203
 :Source: QA
 :Reference: https://gitweb.gentoo.org/proj/portage.git/tree/bin/install-qa-check.d/80multilib-strict
 :Reported: via install-qa-check.d, fatal
@@ -103,6 +106,7 @@ to be correctly found by the dynamic loader.
 
 Static libraries and libtool files
 ----------------------------------
+:PG: 0204
 :Source: QA
 :Reference: https://gitweb.gentoo.org/proj/portage.git/tree/bin/install-qa-check.d/80libraries
 :Reported: via install-qa-check.d, fatal
@@ -124,6 +128,7 @@ be a waste of space.
 
 Game install locations and ownership
 ------------------------------------
+:PG: 0205
 :Source: Council, clarified by QA
 :Reference: https://projects.gentoo.org/council/meeting-logs/20151213-summary.txt
             https://projects.gentoo.org/council/meeting-logs/20151011-summary.txt
@@ -160,6 +165,7 @@ fulfill that purpose.
 
 Absolute symbolic link targets
 ------------------------------
+:PG: 0206
 :Source: QA
 :Reported: by repoman and pkgcheck (when ebuild-generated)
 

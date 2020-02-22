@@ -7,6 +7,7 @@ Installed files
 
 Installation of small files
 ---------------------------
+:PG: 0301
 :Source: QA
 :Reported: no
 
@@ -40,6 +41,7 @@ such a huge package in order to install one tiny file.
 
 Installation of static libraries
 --------------------------------
+:PG: 0302
 :Source: QA
 :Reported: no
 
@@ -61,6 +63,7 @@ libraries if they are never going to be used.
 
 Installation of libtool (.la) files
 -----------------------------------
+:PG: 0303
 :Source: QA
 :Reported: no
 

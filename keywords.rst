@@ -5,6 +5,7 @@ Keywording and stabilization
 
 Rekeywording on dropped keywords
 --------------------------------
+:PG: 0401
 :Source: QA
 :Reported: by pkgcheck and repoman
 
@@ -23,6 +24,7 @@ a new version or to remove an old version.
 
 Stabilizing new versions
 ------------------------
+:PG: 0402
 :Source: QA
 :Reported: by pkgcheck
 
@@ -50,6 +52,7 @@ requested on remaining architectures in the first place.
 
 Removing stable keywords
 ------------------------
+:PG: 0403
 :Source: QA
 :Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=126033#Dropping_Stable_KEYWORDs
 :Reported: n/a

@@ -6,6 +6,7 @@ Users and groups
 
 User and group account policy
 -----------------------------
+:PG: 0901
 :Source: QA
 :Reference: https://bugs.gentoo.org/702460
 :Reported: by repoman and pkgcheck (as deprecated eclass)

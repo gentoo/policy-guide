@@ -8,6 +8,7 @@ Ebuild file format
 
 Coding style
 ------------
+:PG: 0101
 :Source: QA
 :Reported: partially via repoman and pkgcheck
 
@@ -32,6 +33,7 @@ the ebuild.
 
 Code must be contained within ebuild and eclasses
 -------------------------------------------------
+:PG: 0102
 :Source: QA
 :Reference: https://bugs.gentoo.org/612630
 :Reported: no
@@ -54,6 +56,7 @@ that possibility, including linting tools.
 
 HOMEPAGE must not contain variables
 -----------------------------------
+:PG: 0103
 :Source: QA
 :Reported: by pkgcheck, highlighted as error by gentoo-syntax
 
@@ -73,6 +76,7 @@ as reducing the usefulness of plain tools such as grep.
 
 SRC_URI must not refer to HOMEPAGE
 ----------------------------------
+:PG: 0104
 :Source: QA
 :Reported: by pkgcheck
 
@@ -92,6 +96,7 @@ index.
 
 KEYWORDS must be defined on a single line
 -----------------------------------------
+:PG: 0105
 :Source: QA
 :Reported: no
 

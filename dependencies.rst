@@ -6,6 +6,7 @@ Dependencies
 
 Optional runtime dependencies
 -----------------------------
+:PG: 0001
 :Source: QA
 :Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=104017#USE-Controlled_Optional_RDEPENDS
 :Reported: no
@@ -35,6 +36,7 @@ This is especially important for packages that take long time to build.
 
 =-dependencies with no revision
 -------------------------------
+:PG: 0002
 :Source: QA
 :Reported: by repoman and pkgcheck
 
@@ -67,6 +69,7 @@ Slot and subslot dependencies
 
 on (sub-)slotted packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+:PG: 0011
 :Source: QA
 :Reference: https://archives.gentoo.org/gentoo-portage-dev/message/9cae3a92412a007febe7ac0612d50f5f
 :Reported: by repoman and pkgcheck
@@ -100,6 +103,7 @@ means 'verified that any slot is acceptable'.
 
 special case: Qt packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+:PG: 0012
 :Source: Qt project
 :Reference: https://wiki.gentoo.org/wiki/Project:Qt/Policies#Dependencies
 :Reported: no
@@ -132,6 +136,7 @@ They point out the case of Qt packages as an example.
 
 Revision bumps on runtime dependency changes
 --------------------------------------------
+:PG: 0003
 :Source: Council
 :Reference: https://projects.gentoo.org/council/meeting-logs/20151011-summary.txt
 :Reported: no
@@ -175,6 +180,7 @@ USE dependencies
 
 on packages without the flag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:PG: 0021
 :Source: QA (inferred from PMS)
 :Reported: by pkgcheck
 
