@@ -8,6 +8,7 @@ USE flags
 
 Versioned USE flags
 -------------------
+:PG: 0801
 :Source: QA
 :Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=109991#Versioned_USE_flags
 :Reported: no
@@ -38,6 +39,7 @@ with the QA team before introduction.
 
 USE=gui flag
 ------------
+:PG: 0802
 :Source: QA
 :Reference: https://archives.gentoo.org/gentoo-dev/message/cf3f5a59ac918335766632bd02438722
 :Reported: no
@@ -61,6 +63,7 @@ multiple GUIs.
 
 Underscores in USE flag names
 -----------------------------
+:PG: 0803
 :Source: Council
 :Reference: https://projects.gentoo.org/council/meeting-logs/20191013-summary.txt
 :Reported: by pkgcheck

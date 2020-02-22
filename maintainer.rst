@@ -5,6 +5,7 @@ Package Maintainers
 
 Adding new maintainers
 ----------------------
+:PG: 0601
 :Source: QA
 :Reported: no
 
@@ -31,6 +32,7 @@ them from packages actually within project's profile was hard.
 
 New packages without a maintainer
 ---------------------------------
+:PG: 0602
 :Source: QA
 :Reported: no
 
@@ -50,6 +52,7 @@ to take care of them.
 
 Removing package maintainers
 ----------------------------
+:PG: 0603
 :Source: QA
 :Reported: no
 

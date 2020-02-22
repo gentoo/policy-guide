@@ -13,6 +13,7 @@ Python
 
 Eclass usage
 ~~~~~~~~~~~~
+:PG: 0501
 :Source: Python project
 :Reference: https://wiki.gentoo.org/wiki/Project:Python/Eclasses
 :Reported: by pkgcheck
@@ -41,6 +42,7 @@ implementations with minimal changes to existing ebuilds.
 
 Python 2 deprecation
 ~~~~~~~~~~~~~~~~~~~~
+:PG: 0502
 :Source: Python project
 :Reference: https://wiki.gentoo.org/wiki/Project:Python#Python_2_end-of-life
 :Reported: no

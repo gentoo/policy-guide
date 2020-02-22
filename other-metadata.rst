@@ -6,6 +6,7 @@ Other metadata variables
 
 Dynamic slots (multislot flag)
 ------------------------------
+:PG: 0701
 :Source: QA (inferred from PMS)
 :Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=109991#multislot.2FUSE-dependent_SLOT
 :Reported: ``use`` in global scope triggers fatal error
@@ -42,6 +43,7 @@ invalidation or explicit errors.
 
 HOMEPAGE value must be meaningful
 ---------------------------------
+:PG: 0702
 :Source: QA
 :Reference: https://archives.gentoo.org/gentoo-dev/message/83cc5bbd7bbe8bdf04dd3c3bc7f8a035
 :Reported: known bad values are reported by pkgcheck
@@ -69,6 +71,7 @@ easy to identify such packages.
 
 RESTRICT=test for USE=-test
 ---------------------------
+:PG: 0703
 :Source: QA
 :Reported: by pkgcheck
 
@@ -98,6 +101,7 @@ this circumstance, and they will not fail for users.
 
 LICENSE
 -------
+:PG: 0704
 :Source: QA
 :Reported: no
 
