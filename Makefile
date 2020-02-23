@@ -8,7 +8,10 @@ SPHINXPROJ    = GentooPolicyGuide
 SOURCEDIR     = .
 BUILDDIR      = _build
 
-all: html
+all: html $(BUILDDIR)/html/combined.html
+
+$(BUILDDIR)/html/combined.html: singlehtml
+	cp $(BUILDDIR)/singlehtml/index.html $@
 
 .PHONY: all Makefile
 
