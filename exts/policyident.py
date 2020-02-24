@@ -7,6 +7,7 @@ import collections
 from docutils import nodes
 
 from sphinx.domains import Index
+from sphinx.environment.collectors.toctree import TocTreeCollector
 from sphinx.util import logging
 
 
@@ -14,6 +15,8 @@ logger = logging.getLogger(__name__)
 
 Policy = collections.namedtuple('Policy', ('id', 'title', 'docname',
                                            'chapter'))
+
+toccollector = TocTreeCollector()
 
 
 class PolicyIndex(Index):
@@ -89,6 +92,9 @@ def on_doctree_read(app, doctree):
             node['ids'].insert(0, 'pg' + pg_id)
             env.policy_index.append(Policy(pg_id, title, env.docname,
                                            chapter))
+
+    # update the table of conents to use the 'pgXXXX' ids
+    toccollector.process_doc(app, doctree)
 
 
 def on_env_purge_doc(app, env, docname):
