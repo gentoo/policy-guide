@@ -41,7 +41,9 @@ class PolicyIndex(Index):
                                        '',           # qualifier
                                        ''))          # descr
 
-        return ([(k, sorted(v)) for k, v in entries.items()], False)
+        return (sorted([(k, sorted(v)) for k, v in entries.items()],
+                key=lambda kv: kv[1]),
+                False)
 
 
 def find_pg_id(section):
