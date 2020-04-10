@@ -88,3 +88,21 @@ and caused many issues, in particular due to hardcoding full paths.
 Today they are practically replaced by more portable pkg-config files,
 and while libtool keeps generating them, they are considered
 unnecessary and potentially harmful.
+
+
+.. index::
+   pair: installed files; virtuals
+
+Virtuals
+--------
+:PG: 0304
+:Source: QA
+:Reported: no
+
+Packages in the ``virtual`` category must not install any files.
+
+*Rationale*:  The ``virtual`` category is reserved for packages with
+an empty installation image.  Package managers rely on this for some
+optimizations.  Also QA tools make certain assumptions about virtuals,
+e.g., that they must not assign the ``LICENSE`` variable (which would
+be impossible if they installed any files).
