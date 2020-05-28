@@ -57,6 +57,14 @@ really necessary (e.g. for recovery tools) but otherwise proliferating
 it is considered harmful.  There is no point in installing static
 libraries if they are never going to be used.
 
+.. Note::
+
+   If the package's build system does not support disabling static
+   library build, it is recommended to patch it and submit the patch
+   upstream.  However, if that is not feasible and building both shared
+   and static libraries does not require compiling source files twice,
+   it is acceptable to strip static libraries in ``src_install()``.
+
 
 .. index::
    pair: installed files; libtool file
