@@ -32,6 +32,5 @@ Deprecated eclasses should not be used in new ebuilds.  Existing
 packages should be updated not to use these eclasses on version bumps,
 or proactively when no version bumps are expected.
 
-The current list of deprecated eclasses is stored along with suggested
-replacements as ``deprecated-eclass`` section
-of ``metadata/qa-policy.conf``.
+Deprecations are indicated using the ``@DEPRECATED`` eclassdoc tag
+inside the eclass files.
