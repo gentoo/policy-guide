@@ -18,8 +18,8 @@ dependencies is installed.
 
 There is no specific preference as to how user should be informed
 of optional runtime dependencies.  Three possible ways are
-``optfeature`` from ``eutils`` eclass, ``readme.gentoo-r1`` eclass
-and plain ``elog`` messages.
+``optfeature`` eclass, ``readme.gentoo-r1`` eclass and plain ``elog``
+messages.
 
 *Rationale*: toggling USE flags in order to enable or disable optional
 runtime dependencies causes needless rebuilds of packages in question.
