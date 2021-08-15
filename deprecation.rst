@@ -25,7 +25,6 @@ Deprecated eclasses
 -------------------
 :PG: 1003
 :Source: individual eclass maintainers
-:Reference: https://gitweb.gentoo.org/repo/gentoo.git/tree/metadata/qa-policy.conf
 :Reported: by pkgcheck and repoman
 
 Deprecated eclasses should not be used in new ebuilds.  Existing
