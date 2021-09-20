@@ -8,7 +8,7 @@ Dynamic slots (multislot flag)
 ------------------------------
 :PG: 0701
 :Source: QA (inferred from PMS)
-:Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=109991#multislot.2FUSE-dependent_SLOT
+:Reference: https://wiki.gentoo.org/index.php?title=Project:Quality_Assurance/Policies&oldid=109991#multislot.2FUSE-dependent_SLOT, https://bugs.gentoo.org/174407
 :Reported: ``use`` in global scope triggers fatal error
 
 The use of ``multislot`` to alter ``SLOT`` values (as well as any other
