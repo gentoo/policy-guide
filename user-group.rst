@@ -23,12 +23,12 @@ UIDs and GIDs in range 0..100 are reserved for important system
 accounts.  New assignments in that range need to be explicitly approved
 by the QA lead, in response to a justified request from the developer.
 
-The range 101..499 is provided for regular use by packages.
+The range 101..749 is provided for regular use by packages.
 The assignments from this range follow the following rules:
 
 1. A developer can select an arbitrary free UID/GID from this range.
-   If in doubt, it is recommended to select successive numbers from 499
-   downwards.
+   If in doubt, it is recommended to select successive numbers from 101
+   upwards.
 
 2. Unless there is a very good reason not to, matching users and groups
    should use the same number.  It is acceptable to leave gaps
