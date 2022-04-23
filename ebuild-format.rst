@@ -108,3 +108,21 @@ wrapping, appending, etc.).
 when working with large number of ebuilds.  The tool has only limited
 ability to process and modify ebuilds, and therefore developers must
 make sure that it works correctly on their ebuilds.
+
+
+.. index:: license; variable
+
+LICENSE must not contain variables
+----------------------------------
+:PG: 0106
+:Source: QA
+:Reported: no
+
+The ``LICENSE`` variable in an ebuild must specify all the license names
+verbatim, without referring to any variables.  The only exception is
+(implicit or explicit) use of ``LICENSE`` itself, i.e. appending is
+allowed.
+
+*Rationale*: since license names do not contain dynamic parts (such as
+package versions), using variables there has little advantage.  On the
+other hand, variables reduce the usefulness of plain tools such as grep.
