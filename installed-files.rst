@@ -79,7 +79,7 @@ b. the package is installing static libraries that have additional
 
 It is recommended to use the following one-liner to remove .la files::
 
-    find "${ED}" -name '*.la' -delete || die
+    find "${ED}" -type f -name '*.la' -delete || die
 
 *Rationale*: libtool files were historically introduced as an attempt
 to supplement static library archives with dependent library list.
