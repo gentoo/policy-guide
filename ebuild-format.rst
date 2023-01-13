@@ -126,3 +126,21 @@ allowed.
 *Rationale*: since license names do not contain dynamic parts (such as
 package versions), using variables there has little advantage.  On the
 other hand, variables reduce the usefulness of plain tools such as grep.
+
+
+.. index:: d; variable
+
+D must be used only in src_install and pkg_preinst
+--------------------------------------------------
+:PG: 0107
+:Source: QA
+:Reported: no
+
+The ``D`` and ``ED`` variables must be used only in the ``src_install``
+and ``pkg_preinst`` phase functions.  Exceptions to this policy can be
+granted by the QA team.
+
+*Rationale*: using ``D`` in other phases (e.g. ``src_configure``) is
+error-prone and may lead to the path being embedded in files of the
+installed image.  In addition, the directory pointed to by ``${D}``
+does not exist in other phases.
