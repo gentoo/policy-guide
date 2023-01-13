@@ -19,6 +19,7 @@ This document is maintained by the Gentoo `QA project`_.
 The current text authors are:
 
 - Michał Górny (mgorny)
+- Ulrich Müller (ulm)
 
 
 License
