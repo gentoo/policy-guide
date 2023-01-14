@@ -134,7 +134,7 @@ D must be used only in src_install and pkg_preinst
 --------------------------------------------------
 :PG: 0107
 :Source: QA
-:Reported: no
+:Reported: by pkgcheck
 
 The ``D`` and ``ED`` variables must be used only in the ``src_install``
 and ``pkg_preinst`` phase functions.  Exceptions to this policy can be
