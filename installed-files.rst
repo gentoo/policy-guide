@@ -114,3 +114,23 @@ an empty installation image.  Package managers rely on this for some
 optimizations.  Also QA tools make certain assumptions about virtuals,
 e.g., that they must not assign the ``LICENSE`` variable (which would
 be impossible if they installed any files).
+
+
+.. index::
+   pair: installed files; manpages
+
+Installation of manpages
+------------------------
+:PG: 0305
+:Source: QA
+:Reported: no
+
+Packages must not disable installing manpages via USE flags (e.g.
+``USE=man`` or ``USE=doc``).  If upstream does not ship prebuilt
+manpages and building them requires additional dependencies,
+the maintainer should build them and ship along with the package.
+
+*Rationale*: Manpages are basic documentation for installed software.
+While additional dependencies are inconvenient for users, not building
+manpages is harmful.  Including (optionally or unconditionally)
+prebuilt manpages is a good compromise.
