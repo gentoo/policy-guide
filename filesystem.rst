@@ -27,6 +27,8 @@ directories:
    - /usr
    - /var
 
+There must be no subdirectories in /bin and /sbin.
+
 Furthermore, only the following subdirectories of /usr are permitted:
 
 .. hlist::
@@ -40,6 +42,8 @@ Furthermore, only the following subdirectories of /usr are permitted:
    - /usr/share
    - /usr/src
    - /usr/<triplet>
+
+There must be no subdirectories in /usr/bin and /usr/sbin.
 
 Furthermore, within /usr/share/doc hierarchy only a subdirectory named
 after full package name and version with revision (PF) is permitted.
