@@ -27,19 +27,18 @@ Policy compliance checking
 Currently, there are two kinds of tools involved in detecting policy
 violations:
 
-1. Linting-class tools, including repoman_ and pkgcheck_.  Those tools
-   analyze ebuilds and other files in the package repository for known
-   policy violations.  They are limited to checking for problems that
-   can be detected without running the phase functions.
+1. Linting-class tools, including pkgcheck_ and deprecated repoman_.
+   Those tools analyze ebuilds and other files in the package repository
+   for known policy violations.  They are limited to checking for
+   problems that can be detected without running the phase functions.
 
 2. Build- and install-time QA checks, implemented in package managers.
    Those trigger while the ebuilds are executing.  They are limited
    to testing the currently running code path.
 
 Developers are expected to use both kinds of tools before pushing their
-commits.  They should both lint the changed ebuilds using repoman_
-or pkgcheck_, and test whether their packages build and install
-correctly.
+commits.  They should both lint the changed ebuilds using pkgcheck_, and
+test whether their packages build and install correctly.
 
 Additionally, Gentoo is running pkgcheck_ periodically as `Gentoo CI`_.
 All non-trivial violations are reported to the gentoo-automated-testing_
@@ -78,8 +77,8 @@ asked to override the policy.  All QA decisions and policies can further
 be appealed to the Council_.
 
 
-.. _repoman: https://wiki.gentoo.org/wiki/Repoman
 .. _pkgcheck: https://github.com/pkgcore/pkgcheck
+.. _repoman: https://wiki.gentoo.org/wiki/Repoman
 .. _Gentoo CI: https://qa-reports.gentoo.org/output/gentoo-ci/output.html
 .. _gentoo-automated-testing: https://archives.gentoo.org/gentoo-automated-testing/
 .. _QA team: https://wiki.gentoo.org/wiki/Project:Quality_Assurance
