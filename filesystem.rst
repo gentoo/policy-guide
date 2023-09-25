@@ -75,7 +75,7 @@ Developers are not required to support using separate /usr filesystem
 without an initramfs.
 
 *Rationale*: upstream software (as of 2013) is already making support
-for early boot without /usr mounted difficult, and whenever it is still
+for early boot without /usr mounted difficult, and whenever it still
 works, it is either subtly broken or relying on hacks (udev).  In setups
 using initramfs, some of the boot and repair functionality can be moved
 from rootfs to initramfs.
