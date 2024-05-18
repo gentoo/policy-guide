@@ -195,7 +195,7 @@ only versions having the flag.
 
     # BAD: USE=gtk2 is not supported by v2
     dev-foo/libfrobnicate[gtk2]
-    # GOOD: all matching versions have USE=tools
+    # GOOD: all matching versions have USE=gtk2
     <dev-foo/libfrobnicate-2[gtk2]
     # GOOD: indicate the default
     dev-foo/libfrobnicate[gtk2(-)]
